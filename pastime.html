@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lucas Wang" />
+    <meta
+      name="description"
+      content="Pastime and interests of Lucas Wang: personal passions and activities outside of academia and research."
+    />
+    <title>Pastime | Lucas Wang</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="brain_favicon.png" />
+    <script src="sticky-header.js"></script>
+    <script>
+      function scrollGallery(button, direction) {
+        const pastimeItem = button.closest(".pastime-item");
+        const gallery = pastimeItem.querySelector(".pastime-image-gallery");
+        const galleryContainer = gallery.querySelector(".gallery-container");
+        const images = galleryContainer.querySelectorAll("img");
+        const imageWidth = 560; // Width of each image
+        const gap = 16; // Gap between images (1rem)
+        const totalImageWidth = imageWidth + gap;
+
+        // Get current scroll position
+        const currentScroll = gallery.scrollLeft;
+        const galleryWidth = gallery.offsetWidth;
+
+        // Calculate which image should be centered
+        let targetImageIndex;
+
+        if (direction === "prev") {
+          // Find the previous image to center
+          const currentCenter = currentScroll + galleryWidth / 2;
+          const currentImageIndex = Math.floor(currentCenter / totalImageWidth);
+          targetImageIndex = Math.max(0, currentImageIndex - 1);
+        } else {
+          // Find the next image to center
+          const currentCenter = currentScroll + galleryWidth / 2;
+          const currentImageIndex = Math.floor(currentCenter / totalImageWidth);
+          targetImageIndex = Math.min(images.length - 1, currentImageIndex + 1);
+        }
+
+        // Calculate the scroll position to center the target image
+        const targetScroll =
+          targetImageIndex * totalImageWidth -
+          galleryWidth / 2 +
+          imageWidth / 2;
+
+        // Scroll to center the image
+        gallery.scrollTo({
+          left: Math.max(0, targetScroll),
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="aurora-bg">
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+      </div>
+      <div class="subpage-header-topic">
+        <a href="index.html">
+          <img
+            src="brain_favicon.png"
+            alt="Brain Favicon"
+            class="subpage-favicon"
+          />
+        </a>
+        <span>Pastime</span>
+        <p class="header-quote">
+          In reality nothing is more damaging to the adventurous spirit within a
+          man than a secure future. - Christopher McCandless
+        </p>
+        <a class="subpage-header-back" href="index.html">Home &rarr;</a>
+      </div>
+    </header>
+    <main>
+      <section id="pastime">
+        <h2>Pastime & Interests</h2>
+
+        <div class="pastime-container">
+          <div class="pastime-item">
+            <div class="pastime-image-gallery">
+              <div class="gallery-container">
+                <img
+                  src="pastime_pics/climbing_pics/climbing_pic1.jpg"
+                  alt="Rock Climbing Image 1"
+                />
+                <img
+                  src="pastime_pics/climbing_pics/climbing_pic2.jpg"
+                  alt="Rock Climbing Image 2"
+                />
+                <img
+                  src="pastime_pics/climbing_pics/climbing_pic3.jpg"
+                  alt="Rock Climbing Image 3"
+                />
+                <img
+                  src="pastime_pics/climbing_pics/climbing_pic4.jpg"
+                  alt="Rock Climbing Image 4"
+                />
+                <img
+                  src="pastime_pics/climbing_pics/climbing_pic5.jpeg"
+                  alt="Rock Climbing Image 5"
+                />
+              </div>
+            </div>
+            <div class="pastime-content">
+              <div class="pastime-header">
+                <h3>Rock Climbing</h3>
+                <div class="gallery-nav-buttons">
+                  <button
+                    class="nav-btn prev-btn"
+                    onclick="scrollGallery(this, 'prev')"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    class="nav-btn next-btn"
+                    onclick="scrollGallery(this, 'next')"
+                  >
+                    ›
+                  </button>
+                </div>
+              </div>
+              <p class="pastime-description">
+                Rock climbing is my passion. It's what grounds me when research
+                hits roadblocks or coursework becomes overwhelming. I started
+                climbing as a freshman in college and now enjoy bouldering,
+                toproping, and lead climbing. My nemesis boulder problem is
+                "Andrew's Problem V4" at the Gunks in upstate New York.
+              </p>
+              <p class="pastime-description">
+                At Boston, I've been climbing with the local climbing community
+                at outdoor locations including Rumney, Ross Pond, and Lincoln
+                Wood. I've learned anchor building, multi-pitch climbing, and
+                rope rescue skills. I am grateful for the local climbing
+                communities' mentorship and hope to give back as a instructor
+                myself one day.
+              </p>
+            </div>
+          </div>
+
+          <div class="pastime-item">
+            <div class="pastime-image-gallery">
+              <div class="gallery-container">
+                <img
+                  src="pastime_pics/running_pics/running_pic1.jpeg"
+                  alt="Running Image 1"
+                />
+                <img
+                  src="pastime_pics/running_pics/running_pic2.jpeg"
+                  alt="Running Image 2"
+                />
+                <img
+                  src="pastime_pics/running_pics/running_pic3.jpeg"
+                  alt="Running Image 3"
+                />
+                <img
+                  src="pastime_pics/running_pics/running_pic4.jpeg"
+                  alt="Running Image 4"
+                />
+              </div>
+            </div>
+            <div class="pastime-content">
+              <div class="pastime-header">
+                <h3>Long Distance Running</h3>
+                <div class="gallery-nav-buttons">
+                  <button
+                    class="nav-btn prev-btn"
+                    onclick="scrollGallery(this, 'prev')"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    class="nav-btn next-btn"
+                    onclick="scrollGallery(this, 'next')"
+                  >
+                    ›
+                  </button>
+                </div>
+              </div>
+              <p class="pastime-description">
+                It takes an idiot to run a marathon, and I am not afraid to be
+                one. To me, running is the rare thing in life where how much
+                reward you get is exactly how much effort you give. Like rock
+                climbing, it grounds me and remind me of the value of hard work
+                in my harder times.
+              </p>
+              <p class="pastime-description">
+                I've ran a dozen half marathons and a total of 3 marathons so
+                far (San Francisco, Philadelphia, Burlington). I am not a fast
+                runner, but emperical evidence sugguests that I am always making
+                it to the end and always getting a little faster. My current
+                next event is Newport Marathon(Oct 12 2025). My dream is to
+                qualify for and run the Boston Marathon with a sub 2h55min
+                finish, which requires me to be 30% faster than my current best
+                pace.
+              </p>
+            </div>
+          </div>
+
+          <div class="pastime-item">
+            <div class="pastime-image-gallery">
+              <div class="gallery-container">
+                <img
+                  src="pastime_pics/fpv_pics/fpv_pic1.jpeg"
+                  alt="FPV Drone Image 1"
+                />
+                <img
+                  src="pastime_pics/fpv_pics/fpv_pic2.jpeg"
+                  alt="FPV Drone Image 2"
+                />
+                <img
+                  src="pastime_pics/fpv_pics/fpv_pic3.jpeg"
+                  alt="FPV Drone Image 3"
+                />
+                <img
+                  src="pastime_pics/fpv_pics/fpv_pic4.jpeg"
+                  alt="FPV Drone Image 4"
+                />
+                <img
+                  src="pastime_pics/fpv_pics/fpv_pic5.jpeg"
+                  alt="FPV Drone Image 5"
+                />
+                <img
+                  src="pastime_pics/fpv_pics/fpv_pic6.jpeg"
+                  alt="FPV Drone Image 6"
+                />
+              </div>
+            </div>
+            <div class="pastime-content">
+              <div class="pastime-header">
+                <h3>FPV Drone Racing & Building</h3>
+                <div class="gallery-nav-buttons">
+                  <button
+                    class="nav-btn prev-btn"
+                    onclick="scrollGallery(this, 'prev')"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    class="nav-btn next-btn"
+                    onclick="scrollGallery(this, 'next')"
+                  >
+                    ›
+                  </button>
+                </div>
+              </div>
+              <p class="pastime-description">
+                FPV (First-Person View) drone racing is a sport where pilots fly
+                small, agile quadcopters at high speeds using live video feed
+                displayed on goggles. It's a speed race that is all as intense
+                as Formula-1 but doesn't put the pilot in the danger of
+                high-speed crashes. Scaled-up version of FPV drones are used by
+                the industry to film motor sports and movie chase scenes.
+              </p>
+              <p class="pastime-description">
+                As common for FPV pilots, I build my drones from
+                commercially-available modular components: carbon fiber frame,
+                brushless motors, flight control, analog video transmitter...
+                It's a hands-on mix of electrical engineering, basic
+                aerodynamics, and fine flight control. Unfortunately, crash
+                repair can be a pain since most material breaks at such high
+                compact speed. Apart from amateur racing, I also fly
+                recreationally at hobbist air fields and in the forests.
+              </p>
+            </div>
+          </div>
+
+          <div class="pastime-item">
+            <div class="pastime-image-gallery">
+              <div class="gallery-container">
+                <img
+                  src="pastime_pics/photography_pics/photography_pic1.jpg"
+                  alt="Photography Image 1"
+                />
+                <img
+                  src="pastime_pics/photography_pics/photography_pic2.jpg"
+                  alt="Photography Image 2"
+                />
+                <img
+                  src="pastime_pics/photography_pics/photography_pic3.jpg"
+                  alt="Photography Image 3"
+                />
+                <img
+                  src="pastime_pics/photography_pics/photography_pic4.jpg"
+                  alt="Photography Image 4"
+                />
+                <img
+                  src="pastime_pics/photography_pics/photography_pic5.jpg"
+                  alt="Photography Image 5"
+                />
+                <img
+                  src="pastime_pics/photography_pics/photography_pic6.jpg"
+                  alt="Photography Image 6"
+                />
+                <img
+                  src="pastime_pics/photography_pics/photography_pic7.jpg"
+                  alt="Photography Image 7"
+                />
+                <img
+                  src="pastime_pics/photography_pics/photography_pic8.jpg"
+                  alt="Photography Image 8"
+                />
+                <img
+                  src="pastime_pics/photography_pics/photography_pic9.jpg"
+                  alt="Photography Image 9"
+                />
+                <img
+                  src="pastime_pics/photography_pics/photography_pic10.jpg"
+                  alt="Photography Image 10"
+                />
+                <img
+                  src="pastime_pics/photography_pics/photography_pic11.jpg"
+                  alt="Photography Image 11"
+                />
+                <img
+                  src="pastime_pics/photography_pics/photography_pic12.jpg"
+                  alt="Photography Image 12"
+                />
+                <img
+                  src="pastime_pics/photography_pics/photography_pic13.jpg"
+                  alt="Photography Image 13"
+                />
+              </div>
+            </div>
+            <div class="pastime-content">
+              <div class="pastime-header">
+                <h3>Photography</h3>
+                <div class="gallery-nav-buttons">
+                  <button
+                    class="nav-btn prev-btn"
+                    onclick="scrollGallery(this, 'prev')"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    class="nav-btn next-btn"
+                    onclick="scrollGallery(this, 'next')"
+                  >
+                    ›
+                  </button>
+                </div>
+              </div>
+              <p class="pastime-description">
+                When I got into the UCLA Summer Research Program, I used a part
+                of the scholarship toward my first personal camera: Canon R8
+                with a versatile second-hand zoom lens (RF 24-105). I am in
+                front of and behind my camera at my college graduation, my
+                family trip to Utah, my winter hikes in the White Mountains, my
+                recent trip to Alaska ... I shoot landscape, wildlife,
+                portraits, and save my friends money on professional
+                photographers.
+              </p>
+              <p class="pastime-description">
+                Each moment, the sensory information we receive is incredibly
+                high-dimensional, yet visual stimuli alone can robustly engage
+                hippocampal circuits, facilitating pattern completion and
+                content-addressable memory retrieval. These pictures help me
+                re-live each moment behind my camera right before I press for
+                shutter, for that memory is now a part of me.
+              </p>
+            </div>
+          </div>
+
+          <div class="pastime-item">
+            <div class="pastime-image-gallery">
+              <div class="gallery-container">
+                <img
+                  src="pastime_pics/sleep_pics/sleep_pic1.jpeg"
+                  alt="Sleeping Image 1"
+                />
+              </div>
+            </div>
+            <div class="pastime-content">
+              <div class="pastime-header">
+                <h3>Sleeping</h3>
+                <div class="gallery-nav-buttons">
+                  <button
+                    class="nav-btn prev-btn"
+                    onclick="scrollGallery(this, 'prev')"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    class="nav-btn next-btn"
+                    onclick="scrollGallery(this, 'next')"
+                  >
+                    ›
+                  </button>
+                </div>
+              </div>
+              <p class="pastime-description">
+                My <strong>most consistent</strong> hobby that I started doing
+                since childhood. In fact, depending on the hour you are reading
+                this, I might be practicing it right now!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="aurora-bg">
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+      </div>
+      <p>
+        &copy; 2025 Lucas Wang, Built with HTML, CSS & JavaScript, designed and
+        developed by Lucas Wang.
+      </p>
+    </footer>
+  </body>
+</html>

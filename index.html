@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lucas Wang" />
+    <meta
+      name="description"
+      content="A Personal Website for Lucas Wang. Content includes my personal educational background, research projects, simulation work, and hobbies. Written in HTML, CSS, and JavaScript."
+    />
+    <title>Home | Lucas Wang</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="brain_favicon.png" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const lightboxLinks = document.querySelectorAll(".lightbox-link");
+        lightboxLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const imgSrc = this.getAttribute("href");
+            window.open(imgSrc, "_blank");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="aurora-bg">
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+      </div>
+      <div class="main-header-flex">
+        <div class="main-header-info">
+          <h1>
+            <span class="main-title">Lucas Wang</span>
+            <img
+              src="brain_favicon.png"
+              alt="Brain Favicon"
+              class="h1-favicon"
+            />
+          </h1>
+          <p class="subtitle">
+            Biological Science (B.A.) · Computer Science (B.A.), Currently
+            Research Assistant at Harvard University <br />
+            Concentrating in applying machine learning methods to understand the
+            structure of neural dyanmic.
+          </p>
+        </div>
+        <nav>
+          <a href="aboutme.html">About Me</a>
+          <a href="research.html">Research</a>
+          <a href="projects.html">Simulation</a>
+          <a href="pastime.html">Pastime</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home">
+        <h2>Hello there! Welcome to my personal website!</h2>
+        <p>
+          I am Lucas Wang, an aspiring young neuroscience researcher who
+          believes that machine learning Welcome to my personal website! Use the
+          navigation above to learn more about me, my projects, how to contact
+          me, and my hobbies.
+        </p>
+        <div class="centered-image-row">
+          <div style="position: relative">
+            <a href="network_structure.jpg" class="lightbox-link">
+              <img
+                src="network_structure.jpg"
+                alt="Network Structure"
+                class="side-image"
+              />
+            </a>
+            <div class="image-overlay">
+              Attention-based RNN decoder architecture mapping from a trajectory
+              of PV to experiment variables including animal spatial location,
+              travel direction, and experiment phase.
+            </div>
+          </div>
+          <div style="position: relative">
+            <a href="loss_design.png" class="lightbox-link">
+              <img src="loss_design.png" alt="Loss Design" class="side-image" />
+            </a>
+            <div class="image-overlay">
+              Transforming spatial location representation provides challenges
+              to the model to understand the relationship between input and
+              output.
+            </div>
+          </div>
+          <div style="position: relative">
+            <a href="loss_function.png" class="lightbox-link">
+              <img
+                src="loss_function.png"
+                alt="Loss Function"
+                class="side-image"
+              />
+            </a>
+            <div class="image-overlay">
+              Mathematical representation of a specialized loss function used in
+              dynamic loss function scheduling. The "GICEL" loss function
+              improves model generalization and inform the model of the spatial
+              geometry of the output dimensions.
+            </div>
+          </div>
+        </div>
+
+        <div class="centered-image-row">
+          <div style="position: relative">
+            <a
+              href="aboutme_pics/rodentnavigation_pic.png"
+              class="lightbox-link"
+            >
+              <img
+                src="aboutme_pics/rodentnavigation_pic.png"
+                alt="Rodent Spatial Navigation"
+                class="side-image"
+              />
+            </a>
+            <div class="image-overlay">
+              With physical and VR maze setups, navigational paradigms give us a
+              good window for various aspects of brain function.
+            </div>
+          </div>
+          <div style="position: relative">
+            <a href="aboutme_pics/workingmemory_pic.png" class="lightbox-link">
+              <img
+                src="aboutme_pics/workingmemory_pic.png"
+                alt="Working Memory Research"
+                class="side-image"
+              />
+            </a>
+            <div class="image-overlay">
+              Sensory information no longer present to the subject may be needed
+              again for current task, which needs to be maintained as working
+              memory.
+            </div>
+          </div>
+          <div style="position: relative">
+            <a
+              href="aboutme_pics/recallimagination_pic.png"
+              class="lightbox-link"
+            >
+              <img
+                src="aboutme_pics/recallimagination_pic.png"
+                alt="Recall & Imagination Research"
+                class="side-image"
+              />
+            </a>
+            <div class="image-overlay">
+              Circuits might engage in activity patterns not related to the
+              animal's current sensory state, where the pattern can represent
+              past experience or future action planning.
+            </div>
+          </div>
+          <div style="position: relative">
+            <a href="ratecoding_pic.png" class="lightbox-link">
+              <img
+                src="ratecoding_pic.png"
+                alt="Rate Coding"
+                class="side-image"
+              />
+            </a>
+            <div class="image-overlay">
+              Certain information, like behavioral time scale working memory,
+              maintained in the prefrontal cortical circuit might be
+              activity-silent: information is not maintained by simple rate
+              coding.
+            </div>
+          </div>
+        </div>
+
+        <div class="centered-image-row">
+          <div style="position: relative">
+            <a href="triotracing_pic.png" class="lightbox-link">
+              <img
+                src="triotracing_pic.png"
+                alt="TRIO Tracing"
+                class="side-image"
+              />
+            </a>
+            <div class="image-overlay">
+              TRIO analysis, a sophisticated viral-based tracing method, allows
+              us to map the neural connectivity of the subthalamic nucleus.
+            </div>
+          </div>
+          <div style="position: relative">
+            <a href="trioresult_pic.png" class="lightbox-link">
+              <img
+                src="trioresult_pic.png"
+                alt="TRIO Results"
+                class="side-image"
+              />
+            </a>
+            <div class="image-overlay">
+              Analysis at the injection site confirms fluorescent signals from
+              rabies and TVA: the implementation of the construct is successful.
+            </div>
+          </div>
+          <div style="position: relative">
+            <a href="multiphoton_pic.png" class="lightbox-link">
+              <img
+                src="multiphoton_pic.png"
+                alt="Multiphoton Imaging"
+                class="side-image"
+              />
+            </a>
+            <div class="image-overlay">
+              Three-photon microscopy allows us to image the CNS structure of an
+              un-manipulated adult invertebrate with fine anatomical detail.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="aurora-bg">
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+        <div class="aurora-item"></div>
+      </div>
+      <p>
+        &copy; 2025 Lucas Wang, Built with HTML, CSS & JavaScript, designed and
+        developed by Lucas Wang.
+      </p>
+    </footer>
+  </body>
+</html>
