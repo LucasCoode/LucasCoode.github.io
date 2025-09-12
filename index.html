@@ -69,29 +69,97 @@
       <section id="home">
         <h2>Hello there! Welcome to my personal website!</h2>
         <p>
-          I am Lucas Wang, an aspiring young neuroscience researcher who
-          believes that machine learning Welcome to my personal website! Use the
-          navigation above to learn more about me, my projects, how to contact
-          me, and my hobbies.
+          Glad you find your way here! I'm Lucas Wang, a research assistant at
+          Harvard Medical School who combines experimental neuroscience with
+          machine learning to understand how the brain processes spatial
+          information and maintains working memory in rodents. Use the
+          navigational tabs above to learn more about me, my research projects,
+          my simulation works, how to contact me, and my hobbies. Shown below
+          are some relevant topics and works related to my research.
         </p>
         <div class="centered-image-row">
           <div style="position: relative">
-            <a href="network_structure.jpg" class="lightbox-link">
+            <a href="index_pics/rodentnavigation_pic.png" class="lightbox-link">
               <img
-                src="network_structure.jpg"
+                src="index_pics/rodentnavigation_pic.png"
+                alt="Rodent Spatial Navigation"
+                class="side-image"
+              />
+            </a>
+            <div class="image-overlay">
+              With physical and VR maze setups, navigational paradigms give us a
+              good window for various aspects of brain function.
+            </div>
+          </div>
+          <div style="position: relative">
+            <a href="index_pics/workingmemory_pic.png" class="lightbox-link">
+              <img
+                src="index_pics/workingmemory_pic.png"
+                alt="Working Memory Research"
+                class="side-image"
+              />
+            </a>
+            <div class="image-overlay">
+              Sensory information no longer present to the subject may be needed
+              again for current task, which needs to be maintained as working
+              memory.
+            </div>
+          </div>
+          <div style="position: relative">
+            <a
+              href="index_pics/recallimagination_pic.png"
+              class="lightbox-link"
+            >
+              <img
+                src="index_pics/recallimagination_pic.png"
+                alt="Recall & Imagination Research"
+                class="side-image"
+              />
+            </a>
+            <div class="image-overlay">
+              Circuits might engage in activity patterns not related to the
+              animal's current sensory state, where the pattern can represent
+              past experience or future action planning.
+            </div>
+          </div>
+          <div style="position: relative">
+            <a href="index_pics/systemrl_pic.png" class="lightbox-link">
+              <img
+                src="index_pics/systemrl_pic.png"
+                alt="Rate Coding"
+                class="side-image"
+              />
+            </a>
+            <div class="image-overlay">
+              Using reinforcement learning agents trained on the same tasks as
+              animals, systems neuroscience can probe how task demands shape
+              behavior, representations, and computations in the brain.
+            </div>
+          </div>
+        </div>
+
+        <div class="centered-image-row">
+          <div style="position: relative">
+            <a href="index_pics/networkstructure_pic.png" class="lightbox-link">
+              <img
+                src="index_pics/networkstructure_pic.png"
                 alt="Network Structure"
                 class="side-image"
               />
             </a>
             <div class="image-overlay">
               Attention-based RNN decoder architecture mapping from a trajectory
-              of PV to experiment variables including animal spatial location,
+              of PVs to experiment variables including animal spatial location,
               travel direction, and experiment phase.
             </div>
           </div>
           <div style="position: relative">
-            <a href="loss_design.png" class="lightbox-link">
-              <img src="loss_design.png" alt="Loss Design" class="side-image" />
+            <a href="index_pics/lossdesign_pic.png" class="lightbox-link">
+              <img
+                src="index_pics/lossdesign_pic.png"
+                alt="Loss Design"
+                class="side-image"
+              />
             </a>
             <div class="image-overlay">
               Transforming spatial location representation provides challenges
@@ -100,9 +168,9 @@
             </div>
           </div>
           <div style="position: relative">
-            <a href="loss_function.png" class="lightbox-link">
+            <a href="index_pics/lossfunction_pic.png" class="lightbox-link">
               <img
-                src="loss_function.png"
+                src="index_pics/lossfunction_pic.png"
                 alt="Loss Function"
                 class="side-image"
               />
@@ -118,74 +186,56 @@
 
         <div class="centered-image-row">
           <div style="position: relative">
-            <a
-              href="aboutme_pics/rodentnavigation_pic.png"
-              class="lightbox-link"
-            >
+            <a href="index_pics/rlsetup_pic.png" class="lightbox-link">
               <img
-                src="aboutme_pics/rodentnavigation_pic.png"
-                alt="Rodent Spatial Navigation"
+                src="index_pics/rlsetup_pic.png"
+                alt="Research Image 1"
                 class="side-image"
               />
             </a>
             <div class="image-overlay">
-              With physical and VR maze setups, navigational paradigms give us a
-              good window for various aspects of brain function.
+              In reinforcement learning, a Markov Decision Process (MDP)
+              provides a mathematical framework for modeling how an agent learns
+              to choose actions based on states and rewards.
             </div>
           </div>
           <div style="position: relative">
-            <a href="aboutme_pics/workingmemory_pic.png" class="lightbox-link">
+            <a href="index_pics/tmazingsetup_pic.png" class="lightbox-link">
               <img
-                src="aboutme_pics/workingmemory_pic.png"
-                alt="Working Memory Research"
+                src="index_pics/tmazingsetup_pic.png"
+                alt="Research Image 2"
                 class="side-image"
               />
             </a>
             <div class="image-overlay">
-              Sensory information no longer present to the subject may be needed
-              again for current task, which needs to be maintained as working
-              memory.
+              The amazing Tmazing API was designed to model a typical DNMTS
+              (Delayed Non-match to Sample) T-maze navigation task. This
+              implementation extends the OpenAI Gym Env interface with using a
+              PO-MDP (partially observable MDP) framework.
             </div>
           </div>
           <div style="position: relative">
-            <a
-              href="aboutme_pics/recallimagination_pic.png"
-              class="lightbox-link"
-            >
+            <a href="index_pics/tmazingconsole_pic.png" class="lightbox-link">
               <img
-                src="aboutme_pics/recallimagination_pic.png"
-                alt="Recall & Imagination Research"
+                src="index_pics/tmazingconsole_pic.png"
+                alt="Research Image 3"
                 class="side-image"
               />
             </a>
             <div class="image-overlay">
-              Circuits might engage in activity patterns not related to the
-              animal's current sensory state, where the pattern can represent
-              past experience or future action planning.
-            </div>
-          </div>
-          <div style="position: relative">
-            <a href="ratecoding_pic.png" class="lightbox-link">
-              <img
-                src="ratecoding_pic.png"
-                alt="Rate Coding"
-                class="side-image"
-              />
-            </a>
-            <div class="image-overlay">
-              Certain information, like behavioral time scale working memory,
-              maintained in the prefrontal cortical circuit might be
-              activity-silent: information is not maintained by simple rate
-              coding.
+              The Tmazing console provides a graphic interface using a
+              lightweight game library for interacting with the Tmazing API. It
+              can also be used for rendering when running/training RL agents on
+              the task.
             </div>
           </div>
         </div>
 
         <div class="centered-image-row">
           <div style="position: relative">
-            <a href="triotracing_pic.png" class="lightbox-link">
+            <a href="index_pics/triotracing_pic.png" class="lightbox-link">
               <img
-                src="triotracing_pic.png"
+                src="index_pics/triotracing_pic.png"
                 alt="TRIO Tracing"
                 class="side-image"
               />
