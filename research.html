@@ -60,29 +60,66 @@
               Themes: System Neuroscience, Computational Neuroscience, Spatial
               Navigation, Rodent
             </p>
-            <p class="project-description">
-              The dynamics of the natural world are complex, as an animal’s
-              current actions can depend on sensory information acquired over
-              extended periods in the past. Foraging rodents need to remember
-              which patches were already searched to save energy, and humans
-              need to remember where to reach their fingers each morning for
-              their car keys. Both humans and animals demonstrate the ability to
-              use past experiences to plan and simulate future actions, which
-              are important characteristics for higher order brain function and
-              complex decision making.
-            </p>
-            <p class="project-description">
-              My work at Lee Lab as a research assistant models these tasks to
-              study memory recall and imagination in rodent model system with
-              spatial navigation paradigm. We train mice and rats to perform
-              spatial navigation tasks that require them to recall past
-              experiences or actively imagine possible future scenarios. We
-              obtain a high temporal resolution read out of the trajectory of
-              their brain states using electrophysiological techniques, which we
-              then use machine learning and statistical methods to interpret. My
-              project in the lab uses a T-maze based delayed nonmatch-to-sample
-              navigation tasks to study how working memory is maintained on a
-              long behavioral time scale.
+            <p class="project-description" style="font-size: 1.3rem">
+              <span style="display: block; margin-bottom: 1.2em">
+                On a superficial account, the brain contributes to the adaptive
+                success of animals through the control and coordination of
+                effector organs like muscles. Survival of an animal requires the
+                timing of effector activation to bear some relation to purpose:
+                “An animal must contract its jaw muscles when its jaw contains
+                something worth biting and contract its leg muscles when there
+                is something worth running to or away from.”
+              </span>
+              <span style="display: block; margin-bottom: 1.2em">
+                However, as the environment that animals interact with becomes
+                more complex, the decision for current action very often depends
+                on past sensory information no longer present to the animal.
+                Foraging rodents need to remember which patches were already
+                searched to save energy, and humans need to remember where to
+                reach their fingers each morning for their car keys. Both humans
+                and animals demonstrate the ability to use past experiences to
+                plan and simulate future actions, which are important
+                characteristics for higher order brain function and complex
+                decision making.
+              </span>
+              <span style="display: block; margin-bottom: 1.2em">
+                My work at Lee Lab as a research assistant models these tasks to
+                study memory recall and imagination in the rodent model system.
+                We train mice and rats to perform spatial navigation tasks that
+                require them to either actively recall past experiences or
+                imagine possible future scenarios. During behavior, we record
+                from them using multisite silicon probes and population calcium
+                imaging. The data we collect is then interpreted with an array
+                of methods simple and complex, including anything from firing
+                rate analysis to RNN-based experiment variable decoders.
+              </span>
+              <span style="display: block; margin-bottom: 1.2em">
+                My current project uses a T-maze based DNMTS (delayed
+                nonmatch-to-sample) task to study how working memory information
+                is maintained through long delay period in rodents. The task
+                requires the subject to remember a sample stimulus over a long
+                delay and then choose a novel nonmatching option when presented
+                with the sample and a new alternative. In the T-maze setting,
+                both sample stimulus and the new alternative are navigation
+                targets equipped with reward ports. We record from free moving
+                animals during experiment to obtain large-scale
+                electrophysiological data, and we look for reliable patterns
+                that appear consistently during delay period that signals the
+                sample stimulus.
+              </span>
+              <span style="display: block; margin-bottom: 1.2em">
+                An interesting method that I’ve implemented for the analysis
+                uses a LSTM-based decoder architecture and a special loss
+                objective that classifies the animal’s location while
+                differentiating the spatial geometries of different
+                classification target. This makes the model aware of the
+                consequences of different classification errors that reflect the
+                spatial geometry of the maze’s layout. The model was able to
+                improve by 2.4 times on evaluation metrics and converge faster
+                in training, which is helping us to both detect representation
+                of future navigation goals and past navigational experience in
+                mice.
+              </span>
             </p>
           </div>
           <div class="project-image">
