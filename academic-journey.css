@@ -3,9 +3,9 @@
   margin: 2rem 0 0 0;
   padding: 1.5rem 1.5rem;
   background: linear-gradient(135deg, #f5f8fd 0%, #e3f2fd 100%);
-  border-radius: 12px 0 0 12px;
+  border-radius: 12px;
   box-shadow: 0 2px 12px rgba(21, 101, 192, 0.07);
-  width: calc(100% + 2rem);
+  width: calc(100% - 1rem);
   margin-left: 0;
   margin-right: calc(50% - 50vw);
   box-sizing: border-box;
