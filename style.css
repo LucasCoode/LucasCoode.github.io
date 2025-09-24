@@ -455,8 +455,8 @@ header nav {
 
 .profile-pic {
   width: 650px;
-  height: 400px;
-  object-fit: cover;
+  height: 450px;
+  object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(21, 101, 192, 0.1);
   flex-shrink: 0;
@@ -613,7 +613,7 @@ header nav {
 .skill-image img {
   width: 200px;
   height: 150px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(21, 101, 192, 0.15);
 }
@@ -652,7 +652,7 @@ header nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.5rem;
   padding: 1rem;
   background: white;
   border-radius: 12px;
@@ -661,7 +661,7 @@ header nav {
   aspect-ratio: 1;
   justify-content: space-between;
   width: 240px;
-  height: 280px;
+  height: 320px;
 }
 
 .research-area-item:hover {
@@ -853,6 +853,7 @@ header nav {
   margin-left: 4rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
+  width: 98%;
 }
 
 .project-image {
@@ -866,14 +867,14 @@ header nav {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(21, 101, 192, 0.15);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .image-caption {
   font-size: 0.85rem;
   color: #666;
   font-style: italic;
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
 
 /* Pastime Layout Styles */
@@ -947,7 +948,7 @@ header nav {
 .gallery-container img {
   width: 560px;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 8px;
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -1075,7 +1076,7 @@ header nav {
     aspect-ratio: auto;
     width: 280px;
     height: auto;
-    min-height: 320px;
+    min-height: 360px;
     gap: 0.8rem;
     padding: 1rem;
   }
