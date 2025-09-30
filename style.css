@@ -737,7 +737,7 @@ header nav {
 .contact-image {
   width: 100%;
   height: auto;
-  margin-top: 0rem;
+  margin-top: -0.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(21, 101, 192, 0.08);
 }
